@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  pre-release:
+    uses: ./.github/workflows/test_release_publish.yml
+    permissions:
+      contents: write
+    with:
+      pre-release: true
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
