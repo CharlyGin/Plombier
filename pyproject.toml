@@ -1,11 +1,13 @@
 [project]
-name = "say_hello_sample_library"
-version = "0.1.2"
-description = "A sample package"
+name = "plombier"
+version = "0.0.1"
+description = "Bitoduc library"
 readme = "README.md"
 authors = [
     { name = "CharlyGin", email = "support@charly-ginevra.fr" }
 ]
+license = "MIT"
+license-files = ["LICENSE.txt"]
 requires-python = ">=3.9"
 dependencies = []
 
@@ -23,7 +25,7 @@ dev = [
 ]
 
 [tool.uv.build-backend]
-module-name = "say_hello"
+module-name = "plombier"
 
 [[tool.uv.index]]
 name = "testpypi"
